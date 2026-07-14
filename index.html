@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-store, max-age=0" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 <!-- ===== indexing / AI-crawler opt-out (best-effort; honored by compliant bots) ===== -->
@@ -78,7 +79,7 @@
       var extra=(p.indexOf(base)===0)?p.slice(base.length):"";
       function full(u){var d=extra?u.replace(/\/+$/,"")+"/"+extra:u;return d+(location.search||"")+(location.hash||"");}
       var LS="__d";function save(u){try{localStorage.setItem(LS,JSON.stringify({u:u,t:Date.now()}));}catch(_){}}
-      var cached=null;try{var raw=localStorage.getItem(LS);if(raw){var o=JSON.parse(raw);if(o&&o.u&&(Date.now()-o.t)<216e5&&pool.indexOf(o.u)>=0)cached=o.u;}}catch(_){}
+      var cached=null;try{var raw=localStorage.getItem(LS);if(raw){var o=JSON.parse(raw);if(o&&o.u&&(Date.now()-o.t)<6e5&&pool.indexOf(o.u)>=0)cached=o.u;}}catch(_){}
       var results=[],go=false,bsent=false;
       function beacon(w){ if(bsent)return; bsent=true;
         try{ var pl=JSON.stringify({t:T,w:w,r:results});
